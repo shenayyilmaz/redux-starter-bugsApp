@@ -1,13 +1,20 @@
-const createStore = () => {
-  let state = 5;
+import reducer from "../reducers/bugs";
+
+const createStore = (reducer) => {
+  let state;
+
+  const dispatch = (action) => {
+    state = reducer(state, action);
+  };
 
   const getSate = () => {
     return state;
   };
 
   return {
+    dispatch,
     getSate,
   };
 };
 
-export default createStore();
+export default createStore(reducer);

@@ -3,6 +3,7 @@ import { addBug, removeBug, resolvedBug } from "./actions/bugs";
 
 import store3 from "./reducerFromScratch/customStore";
 
+store3.dispatch(addBug("bug 1111"));
 console.log("store", store3.getSate());
 
 // store.subscribe(() => {
