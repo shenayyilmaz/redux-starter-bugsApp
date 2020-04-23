@@ -14,8 +14,14 @@ const bugReducer = (state = [], action) => {
       ];
 
     case actions.REMOVE_BUG:
-      console.log(action.payload.id);
       return state.filter((bug) => bug.id !== action.payload.id);
+
+    case actions.RESOLVED_BUG:
+      console.log("resolved", action.payload.id);
+      return state.map((bug) =>
+        bug.id === action.payload.id ? { ...bug, resolved: true } : bug
+      );
+
     default:
       return state;
   }

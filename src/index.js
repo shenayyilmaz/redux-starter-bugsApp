@@ -1,6 +1,5 @@
 import store from "./store/configureStore";
-import * as actions from "./actions/actioinsType";
-import { addBug, removeBug } from "./actions/bugs";
+import { addBug, removeBug, resolvedBug } from "./actions/bugs";
 
 store.subscribe(() => {
   console.log("store is change", store.getState());
@@ -9,4 +8,5 @@ store.subscribe(() => {
 store.dispatch(addBug("BUG 3"));
 store.dispatch(addBug("BUG 4"));
 
+store.dispatch(resolvedBug(2));
 store.dispatch(removeBug(1));
