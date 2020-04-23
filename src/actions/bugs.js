@@ -1,15 +1,15 @@
 import * as actions from "../actions/actioinsType";
 
-export const addBug = () => ({
+export const addBug = (description) => ({
   type: actions.ADD_BUG,
   payload: {
-    description: "bug1",
+    description,
   },
 });
 
-export const removeBug = () => ({
+export const removeBug = (id) => ({
   type: actions.REMOVE_BUG,
   payload: {
-    id: 1,
+    id,
   },
 });

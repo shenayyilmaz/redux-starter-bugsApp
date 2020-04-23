@@ -6,7 +6,7 @@ store.subscribe(() => {
   console.log("store is change", store.getState());
 });
 
-store.dispatch(addBug());
-store.dispatch(addBug());
+store.dispatch(addBug("BUG 3"));
+store.dispatch(addBug("BUG 4"));
 
-store.dispatch(removeBug());
+store.dispatch(removeBug(1));
