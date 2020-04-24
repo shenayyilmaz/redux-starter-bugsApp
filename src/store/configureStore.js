@@ -1,8 +1,8 @@
 import { createStore } from "redux";
 import { devToolsEnhancer } from "redux-devtools-extension";
 
-import bugReducer from "../reducers/bugs";
+import reducer from "./bugs";
 
-const store = createStore(bugReducer, devToolsEnhancer({ trace: true }));
+const store = createStore(reducer, devToolsEnhancer({ trace: true }));
 
 export default store;
